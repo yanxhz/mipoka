@@ -27,12 +27,12 @@ public class SessionController {
         return sessionService.getSessionById(id);
     }
 
-    @PostMapping("/post")
+    @PostMapping
     public Session createSession(@RequestBody Session session) {
         return sessionService.createSession(session);
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public Session updateSession(@PathVariable Long id, @RequestBody Session updatedSession) {
         return sessionService.updateSession(id, updatedSession);
     }
